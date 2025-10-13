@@ -6,6 +6,7 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
+import homeLogo from "../assets/cghomelogo.webp";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -80,7 +81,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <img
-                src="/src/assets/cghomelogo.webp"
+                src={homeLogo}
                 alt="Cape Town cityscape with modern ride-hailing vehicle featuring security technology"
                 className="w-300px h-auto rounded-xl"
               />
