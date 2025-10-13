@@ -1,15 +1,22 @@
-import { Link } from 'react-router-dom';
-import { Mail, Phone, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
-import logo from '../assets/CapeGoFinalLogo.webp';
+import { Link } from "react-router-dom";
+import {
+  Mail,
+  Phone,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+} from "lucide-react";
+import logo from "../assets/logo.webp";
 
 const Footer = () => {
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'The Challenge', path: '/challenge' },
-    { name: 'Our Solution', path: '/solution' },
-    { name: 'Economic Impact', path: '/economic-impact' },
-    { name: 'Strategic Partnership', path: '/partnership' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "The Challenge", path: "/challenge" },
+    { name: "Our Solution", path: "/solution" },
+    { name: "Economic Impact", path: "/economic-impact" },
+    { name: "Strategic Partnership", path: "/partnership" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
@@ -52,13 +59,19 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-[#B0CEE3] text-sm">
                 <Mail size={16} className="text-[#EB5E1F]" />
-                <a href="mailto:info@mylucidlife.app" className="hover:text-white transition-colors">
+                <a
+                  href="mailto:info@mylucidlife.app"
+                  className="hover:text-white transition-colors"
+                >
                   info@mylucidlife.app
                 </a>
               </li>
               <li className="flex items-center gap-2 text-[#B0CEE3] text-sm">
                 <Phone size={16} className="text-[#EB5E1F]" />
-                <a href="tel:+27603158538" className="hover:text-white transition-colors">
+                <a
+                  href="tel:+27603158538"
+                  className="hover:text-white transition-colors"
+                >
                   +27 60 315 8538
                 </a>
               </li>
@@ -104,7 +117,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-8 pt-8 border-t border-[#42414A] text-center">
           <p className="text-[#B0CEE3] text-sm">
-            Founder and Developer: <span className="text-white font-semibold">Charles Duckitt</span>
+            Founder and Developer:{" "}
+            <span className="text-white font-semibold">Charles Duckitt</span>
           </p>
           <p className="text-[#B0CEE3] text-sm mt-2">
             © {new Date().getFullYear()} CapeGo. All rights reserved.
@@ -116,4 +130,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

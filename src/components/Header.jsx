@@ -1,19 +1,19 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import logo from '../assets/CapeGoFinalLogo.webp';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import logo from "../assets/logo.webp";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navItems = [
-    { name: 'Home', path: '/' },
-    { name: 'The Challenge', path: '/challenge' },
-    { name: 'Our Solution', path: '/solution' },
-    { name: 'Economic Impact', path: '/economic-impact' },
-    { name: 'Strategic Partnership', path: '/partnership' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "The Challenge", path: "/challenge" },
+    { name: "Our Solution", path: "/solution" },
+    { name: "Economic Impact", path: "/economic-impact" },
+    { name: "Strategic Partnership", path: "/partnership" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path) => location.pathname === path;
@@ -24,9 +24,9 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo and Brand */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={logo} 
-              alt="CapeGo Logo" 
+            <img
+              src={logo}
+              alt="CapeGo Logo"
               className="h-12 w-12 transition-transform duration-300 group-hover:scale-110"
             />
             <span className="brand-font text-3xl font-bold text-white">
@@ -42,8 +42,8 @@ const Header = () => {
                 to={item.path}
                 className={`px-4 py-2 rounded-lg transition-all duration-300 ${
                   isActive(item.path)
-                    ? 'text-[#EB5E1F] neomorph-inset'
-                    : 'text-[#B0CEE3] hover:text-white hover:neomorph-button'
+                    ? "text-[#EB5E1F] neomorph-inset"
+                    : "text-[#B0CEE3] hover:text-white hover:neomorph-button"
                 }`}
               >
                 {item.name}
@@ -71,8 +71,8 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
                 className={`block px-4 py-3 rounded-lg mb-2 transition-all duration-300 ${
                   isActive(item.path)
-                    ? 'text-[#EB5E1F] neomorph-inset'
-                    : 'text-[#B0CEE3] hover:text-white hover:neomorph-button'
+                    ? "text-[#EB5E1F] neomorph-inset"
+                    : "text-[#B0CEE3] hover:text-white hover:neomorph-button"
                 }`}
               >
                 {item.name}
@@ -86,4 +86,3 @@ const Header = () => {
 };
 
 export default Header;
-
