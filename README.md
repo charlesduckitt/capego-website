@@ -139,3 +139,4 @@ The website is deployed using the Manus deployment system. The production build 
 
 © 2025 CapeGo. All rights reserved.
 
+# capego-website
